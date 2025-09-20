@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Strategy 1</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<header><div class="container">
+  <h1>Strategy 1</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="strategy-1.html">1</a>
+    <a href="strategy-2.html">2</a>
+    <a href="strategy-3.html">3</a>
+    <a href="strategy-4.html">4</a>
+  </nav>
+</div></header>
+
+<main class="container">
+  <section class="card">
+    <img src="assets/slide1.png" alt="Strategy 1" style="width:100%;height:auto;border-radius:12px">
+  </section>
+
+  <section class="card">
+    <h2>Code details</h2>
+    <details open>
+      <summary>Show / hide Python code</summary>
+      <div class="code-actions">
+        <button id="copy">Copy code</button>
+        <a href="simulate1.py" download><button type="button">Download .py</button></a>
+      </div>
+      <pre id="code"><code># --- Paste your simulation code for this page ---
+import numpy as np, pandas as pd
+def demo(): print("Hello from this strategy page")
+if __name__ == "__main__": demo()
+</code></pre>
+    </details>
+    <p style="color:#666">Replace this placeholder with your real code in <code>simulate1.py</code> and in the block above.</p>
+  </section>
+</main>
+
+<footer class="container">© 2025 — Your Name</footer>
+
+<script>
+document.getElementById('copy').addEventListener('click', async () => {
+  const text = document.getElementById('code').innerText;
+  try {
+    await navigator.clipboard.writeText(text);
+    const btn = document.getElementById('copy');
+    const old = btn.innerText;
+    btn.innerText = 'Copied!';
+    setTimeout(() => btn.innerText = old, 1200);
+  } catch (e) {
+    alert('Copy failed. Select the code and press Ctrl/Cmd+C.');
+  }
+});
+</script>
+</body></html>
